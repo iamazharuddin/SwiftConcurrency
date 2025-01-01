@@ -6,16 +6,23 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                NavigationLink {
+                    TaskScreen()
+                } label: {
+                    Text("Open Task Screen.")
+                        .font(.title3)
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10.0)
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
